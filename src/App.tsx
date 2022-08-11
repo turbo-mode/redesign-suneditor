@@ -13,20 +13,60 @@ function App() {
     editor.current = sunEditor;
   };
 
-  console.log(buttonList);
-  const showController = (name, controllers) => {
-    console.log(name, controllers);
-  };
-
   return (
     <div>
-      <p> My Other Contents </p>
       <SunEditor
         getSunEditorInstance={getSunEditorInstance}
-        showController={showController}
         setOptions={{
           height: "200px",
-          buttonList: buttonList.complex,
+          mode: "classic",
+          rtl: false,
+          katex: "window.katex",
+          imageGalleryUrl:
+            "https://etyswjpn79.execute-api.ap-northeast-1.amazonaws.com/suneditor-demo",
+          videoFileInput: false,
+          tabDisable: false,
+          buttonList: [
+            [
+              "undo",
+              "redo",
+              "font",
+              "fontSize",
+              "formatBlock",
+              "paragraphStyle",
+              "blockquote",
+              "bold",
+              "underline",
+              "italic",
+              "strike",
+              "subscript",
+              "superscript",
+              "fontColor",
+              "hiliteColor",
+              // "textStyle",
+              "removeFormat",
+              "outdent",
+              "indent",
+              "align",
+              "horizontalRule",
+              "list",
+              "lineHeight",
+              "table",
+              "link",
+              "image",
+              // "video",
+              // "audio",
+              // "math",
+              "imageGallery",
+              "fullScreen",
+              "showBlocks",
+              "codeView",
+              "preview",
+              "print",
+              "save",
+              // "template",
+            ],
+          ],
           // @ts-ignore
           icons: icons,
         }}
