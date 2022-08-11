@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import SunEditor, { buttonList } from "suneditor-react";
 import SunEditorCore from "suneditor/src/lib/core";
+import "./styles/_suneditor.scss";
 
-import "suneditor/dist/css/suneditor.min.css";
 import icons from "./assets/icons";
 
 function App() {
@@ -14,25 +14,26 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="editor">
       <SunEditor
         getSunEditorInstance={getSunEditorInstance}
         setOptions={{
+          // colorList: ["#000000", "#e60000", "#ff9900", "#ffff00", "#008a00"],
+          // _printClass: "print-class",
+          charCounter: true,
+          charCounterType: "char",
+          charCounterLabel: "Characters",
+          maxCharCount: 1000,
           height: "200px",
           mode: "classic",
           rtl: false,
-          katex: "window.katex",
           imageGalleryUrl:
             "https://etyswjpn79.execute-api.ap-northeast-1.amazonaws.com/suneditor-demo",
-          videoFileInput: false,
           tabDisable: false,
           buttonList: [
+            ["undo", "redo"],
+            ["fontSize", "formatBlock"],
             [
-              "undo",
-              "redo",
-              "font",
-              "fontSize",
-              "formatBlock",
               "paragraphStyle",
               "blockquote",
               "bold",
@@ -43,20 +44,20 @@ function App() {
               "superscript",
               "fontColor",
               "hiliteColor",
-              // "textStyle",
               "removeFormat",
+            ],
+            [
               "outdent",
               "indent",
               "align",
               "horizontalRule",
               "list",
               "lineHeight",
+            ],
+            [
               "table",
               "link",
               "image",
-              // "video",
-              // "audio",
-              // "math",
               "imageGallery",
               "fullScreen",
               "showBlocks",
