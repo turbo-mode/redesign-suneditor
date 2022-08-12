@@ -13,10 +13,23 @@ function App() {
     editor.current = sunEditor;
   };
 
+  const handleOnLoad = () => {
+    const tabLink = document.querySelector('button[data-tab-link="url"]');
+    const tabContentURL = document.querySelector("._se_tab_content_url");
+    const dialogForms = document.querySelectorAll(".se-dialog-form");
+
+    [tabLink, tabContentURL].forEach((el) => {
+      if (el) el.remove();
+    });
+
+    if (dialogForms) dialogForms[1].remove();
+  };
+
   return (
     <div className="editor">
       <SunEditor
         getSunEditorInstance={getSunEditorInstance}
+        onLoad={handleOnLoad}
         setOptions={{
           // colorList: ["#000000", "#e60000", "#ff9900", "#ffff00", "#008a00"],
           // _printClass: "print-class",
