@@ -1,8 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+// * {
+//
+//   box-sizing: border-box;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
 .sun-editor {
   width: auto;
   height: auto;
   box-sizing: border-box;
-  font-family: Helvetica Neue;
+  font-family: "Roboto", sans-serif !important;
   border: 1px solid #dadada;
   background-color: #fff;
   color: #000;
@@ -2133,7 +2142,7 @@
   }
 }
 .sun-editor-editable {
-  font-family: Helvetica Neue;
+  font-family: "Roboto", sans-serif !important;
   font-size: 13px;
   color: #333;
   background-color: #fff;

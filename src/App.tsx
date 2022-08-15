@@ -33,6 +33,7 @@ function App() {
         setOptions={{
           // colorList: ["#000000", "#e60000", "#ff9900", "#ffff00", "#008a00"],
           // _printClass: "print-class",
+          defaultStyle: "font-family: inherit; font-size: 16px;",
           charCounter: true,
           charCounterType: "char",
           charCounterLabel: "Characters",
